@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import './App.css'
 import axios from 'axios'
-import Recipe from './components/Recipe'
+import Card from './components/Card'
+// import Recipe from './components/Recipe'
 
 function App() {
 
@@ -20,7 +21,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title">Recipes 🌮🍝</h1>
+      {recipes.map(recipe => (
+        <Card
+          title={recipe.name}
+          image={recipe.image}
+          description={recipe.description}
+        />
+      ))}
+      {/* <h1 className="title">Recipes 🌮🍝</h1>
       <form className="search-form">
         <input className="search-bar" type="text" />
         <input className="search-button" type="submit" value='Search' />
@@ -35,7 +43,7 @@ function App() {
             lifestyles={recipe.lifestyle}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
