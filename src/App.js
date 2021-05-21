@@ -3,6 +3,7 @@ import './App.css'
 import axios from 'axios'
 import Card from './components/Card'
 import Header from './components/Header'
+import SearchForm from './components/SearchForm'
 // import Recipe from './components/Recipe'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <SearchForm />
         {recipes.map(recipe => (
           <Card
             title={recipe.name}
