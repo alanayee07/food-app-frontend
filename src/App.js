@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './App.css'
 import axios from 'axios'
 import Card from './components/Card'
+import Header from './components/Header'
 // import Recipe from './components/Recipe'
 
 function App() {
@@ -21,13 +22,14 @@ function App() {
 
   return (
     <div className="App">
-      {recipes.map(recipe => (
-        <Card
-          title={recipe.name}
-          image={recipe.image}
-          description={recipe.description}
-        />
-      ))}
+      <Header />
+        {recipes.map(recipe => (
+          <Card
+            title={recipe.name}
+            image={recipe.image}
+            description={recipe.description}
+          />
+        ))}
       {/* <h1 className="title">Recipes 🌮🍝</h1>
       <form className="search-form">
         <input className="search-bar" type="text" />
