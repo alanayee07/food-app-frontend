@@ -8,6 +8,7 @@ const CardList = ({recipes}) => {
       {recipes.map(recipe => (
         <Card
           title={recipe.name}
+          key={recipe.id}
           image={recipe.image}
           description={recipe.description}
         />
