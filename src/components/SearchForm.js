@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const SearchForm = () => {
+const SearchForm = ({recipes, getAllRecipes}) => {
 
   const [inputText, setInputText] = useState('');
 
@@ -8,14 +8,16 @@ const SearchForm = () => {
     setInputText(e.target.value);
   }
 
-  // const handleSubmit = e => {
-  //   e.preventDefault();
+  const onSubmit = e => {
+    e.preventDefault();
+    // getAllRecipes();
+  }
 
-  // }
+  // console.log('these are the recipes: ', recipes);
 
 
   return (
-    <form className="app-searchForm">
+    <form className="app-searchForm" onSubmit={onSubmit}>
       <input
         className="app-input"
         type="text"
