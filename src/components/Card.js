@@ -11,9 +11,7 @@ const Card = ({ title, image, description}) => {
         <div className="card-title">
           <h1>{title}</h1>
         </div>
-        <div className="card-description">
-          <p>{description}</p>
-        </div>
+        <span className="card-description">{description}</span>
       </div>
     </div>
   )

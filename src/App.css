@@ -1,13 +1,40 @@
 .App {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 40px 20px;
 }
 
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.app-searchForm {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.app-input {
+  padding: 10px;
+  width: 300px;
+  margin-right: 4px;
+}
+
+.app-submit {
+  background-color: #02aff0;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 16px;
+  border: 1px;
+}
 .card-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
+
 .recipe-container {
   display: flex;
   flex-direction: column;

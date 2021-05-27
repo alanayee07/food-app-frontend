@@ -21,35 +21,11 @@ function App() {
       })
   }, [])
 
-
   return (
     <div className="App">
       <Header />
-      <SearchForm />
+      <SearchForm recipes={recipes}/>
       <CardList recipes={recipes}/>
-        {/* {recipes.map(recipe => (
-          <Card
-            title={recipe.name}
-            image={recipe.image}
-            description={recipe.description}
-          />
-        ))} */}
-      {/* <h1 className="title">Recipes 🌮🍝</h1>
-      <form className="search-form">
-        <input className="search-bar" type="text" />
-        <input className="search-button" type="submit" value='Search' />
-      </form>
-      <div className="recipe-container">
-        {recipes.map((recipe, i) => (
-          <Recipe
-            key={i}
-            title={recipe.name}
-            image={recipe.image}
-            description={recipe.description}
-            lifestyles={recipe.lifestyle}
-          />
-        ))}
-      </div> */}
     </div>
   );
 }
