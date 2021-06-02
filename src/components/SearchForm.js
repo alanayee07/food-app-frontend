@@ -10,8 +10,11 @@ const SearchForm = ({recipes, getAllRecipes}) => {
 
   const onSubmit = e => {
     e.preventDefault();
-    // getAllRecipes();
+
+    // axios call with query params
+
   }
+
 
   // console.log('these are the recipes: ', recipes);
 

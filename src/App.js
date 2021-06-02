@@ -10,6 +10,7 @@ import SearchForm from './components/SearchForm'
 function App() {
 
   const [recipes, setRecipes] = useState([]);
+  // const [filteredRecipes, setFilteredRecipes] = useState(recipes);
 
   const url = 'http://localhost:3000/';
 
@@ -21,7 +22,6 @@ function App() {
     axios.get(`${url}recipes`)
       .then(response => {
         const data = response.data;
-        console.log(data);
         setRecipes(data);
       })
       .catch(error => console.error(`Error: ${error}`));
