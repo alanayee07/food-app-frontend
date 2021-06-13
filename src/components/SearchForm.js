@@ -1,22 +1,36 @@
 import React, {useState} from 'react'
+import axios from 'axios'
 
-const SearchForm = ({recipes, getAllRecipes}) => {
+const SearchForm = ({recipes, getAllRecipes, setRecipes}) => {
+
+  const url = 'http://localhost:3000/';
 
   const [inputText, setInputText] = useState('');
+
 
   const handleChange = e => {
     setInputText(e.target.value);
   }
 
+
   const onSubmit = e => {
     e.preventDefault();
+
+    axios.get(`${url}recipes`, { params: {searchText: inputText}})
+      .then(response => {
+        const data = response.data;
+        console.log(data);
+        setRecipes(data);
+      })
+      .catch(error => console.error(`Error: ${error}`));
 
     // axios call with query params
 
   }
 
+  // send query (string) to server on Submit
+  //
 
-  // console.log('these are the recipes: ', recipes);
 
 
   return (

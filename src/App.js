@@ -43,7 +43,9 @@ function App() {
       <Header />
       <SearchForm
         recipes={recipes}
-        getAllRecipes={getAllRecipes} />
+        getAllRecipes={getAllRecipes}
+        setRecipes={setRecipes}
+         />
       <CardList recipes={recipes}/>
     </div>
   );
