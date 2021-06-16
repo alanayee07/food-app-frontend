@@ -2,6 +2,7 @@ import React from 'react'
 import './Card.css'
 
 const Card = ({ title, image, description}) => {
+
   return (
     <div className="card">
       <div className="image-container">
@@ -12,6 +13,10 @@ const Card = ({ title, image, description}) => {
           <h1>{title}</h1>
         </div>
         <span className="card-description">{description}</span>
+      </div>
+      <div className="card-buttons">
+        <button className="expand-button">Expand
+        </button>
       </div>
     </div>
   )

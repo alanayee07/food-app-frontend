@@ -22,6 +22,12 @@ h1 {
   font-size: medium;
 }
 
+.card-description {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+
 /* .card-title {
   display: flex;
   justify-content: center;
