@@ -5,12 +5,8 @@ const Card = ({ title, image, description}) => {
 
   const [isActive, setIsActive] = useState(false);
 
-  const handleShow = () => {
-    setIsActive(true);
-  }
-
-  const handleHide = () => {
-    setIsActive(false);
+  const handleShowMore = () => {
+    setIsActive(!isActive);
   }
 
   return (
@@ -28,11 +24,9 @@ const Card = ({ title, image, description}) => {
         {isActive ? <h1>Hello!</h1> : null}
         <button
           className="show-button"
-          onClick={handleShow}>Show More
+          onClick={handleShowMore}
+          >Show More
         </button>
-        <button
-          className="hide-button"
-          onClick={handleHide}>Hide</button>
       </div>
     </div>
   )
