@@ -1,7 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Card.css'
 
 const Card = ({ title, image, description}) => {
+
+  const [isActive, setIsActive] = useState(false);
+
+  const handleShow = () => {
+    setIsActive(true);
+  }
+
+  const handleHide = () => {
+    setIsActive(false);
+  }
 
   return (
     <div className="card">
@@ -15,8 +25,14 @@ const Card = ({ title, image, description}) => {
         <span className="card-description">{description}</span>
       </div>
       <div className="card-buttons">
-        <button className="expand-button">Expand
+        {isActive ? <h1>Hello!</h1> : null}
+        <button
+          className="show-button"
+          onClick={handleShow}>Show More
         </button>
+        <button
+          className="hide-button"
+          onClick={handleHide}>Hide</button>
       </div>
     </div>
   )
