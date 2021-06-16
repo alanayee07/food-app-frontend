@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import CardDirections from './CardDirections'
 import './Card.css'
 
-const Card = ({ title, image, description}) => {
+const Card = ({ title, image, description, directions}) => {
 
   const [isActive, setIsActive] = useState(false);
 
@@ -22,7 +22,7 @@ const Card = ({ title, image, description}) => {
         <span className="card-description">{description}</span>
       </div>
       <div className="card-buttons">
-        {isActive ? <CardDirections /> : null}
+        {isActive ? <CardDirections directions={directions} /> : null}
         <button
           className="show-button"
           onClick={handleShowMore}

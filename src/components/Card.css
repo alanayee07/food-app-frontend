@@ -29,7 +29,8 @@ h1 {
   height: 110px;
 }
 
-/* .card-title {
+.card-buttons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-} */
+}

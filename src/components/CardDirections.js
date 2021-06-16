@@ -1,9 +1,13 @@
 import React from 'react'
 
-const CardDirections = () => {
+const CardDirections = ({directions}) => {
   return (
     <div>
-      <h3>Recipe Directions Go Here</h3>
+      <h4>Instructions: </h4>
+      {directions.map(direction =>
+        <ul>
+          <li>{direction}</li>
+        </ul>)}
     </div>
   )
 }
