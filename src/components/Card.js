@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import CardDirections from './CardDirections'
 import './Card.css'
 
 const Card = ({ title, image, description}) => {
@@ -21,7 +22,7 @@ const Card = ({ title, image, description}) => {
         <span className="card-description">{description}</span>
       </div>
       <div className="card-buttons">
-        {isActive ? <h1>Hello!</h1> : null}
+        {isActive ? <CardDirections /> : null}
         <button
           className="show-button"
           onClick={handleShowMore}
