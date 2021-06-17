@@ -5,10 +5,11 @@ const CardDirections = ({directions}) => {
   return (
     <div className="recipe-instructions">
       <h4>Instructions: </h4>
-      {directions.map(direction =>
-        <ul>
+      <ol>
+        {directions.map(direction =>
           <li>{direction}</li>
-        </ul>)}
+        )}
+      </ol>
     </div>
   )
 }
