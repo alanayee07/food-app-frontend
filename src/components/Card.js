@@ -1,13 +1,19 @@
 import React, {useState} from 'react'
 import CardDirections from './CardDirections'
+import CardIngredients from './CardIngredients'
 import './Card.css'
 
-const Card = ({ title, image, description, directions}) => {
+const Card = ({ title, image, description, directions, ingredients}) => {
 
   const [isActive, setIsActive] = useState(false);
+  const [toggleIngredients, setToggleIngredients] = useState(false);
 
   const handleShowMore = () => {
     setIsActive(!isActive);
+  }
+
+  const handleShowIngredients = () => {
+    setToggleIngredients(!toggleIngredients);
   }
 
   return (
@@ -22,13 +28,19 @@ const Card = ({ title, image, description, directions}) => {
         <span className="card-description">{description}</span>
       </div>
       <div className="card-buttons">
-        {isActive ? <CardDirections directions={directions} /> : null}
         <button
           className="show-button"
           onClick={handleShowMore}
           >Show More
         </button>
+        <button
+          className="ingredients-button"
+          onClick={handleShowIngredients}
+          >Show Ingredients
+        </button>
       </div>
+      {isActive ? <CardDirections directions={directions} /> : null}
+      {toggleIngredients ? <CardIngredients ingredients={ingredients} /> : null}
     </div>
   )
 }

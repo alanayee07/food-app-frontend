@@ -12,6 +12,7 @@ const CardList = ({recipes}) => {
           image={recipe.image}
           description={recipe.description}
           directions={recipe.directions}
+          ingredients={recipe.ingredients}
         />
       ))}
     </div>
