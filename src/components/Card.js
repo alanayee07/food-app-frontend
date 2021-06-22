@@ -31,12 +31,12 @@ const Card = ({ title, image, description, directions, ingredients}) => {
         <button
           className="show-button"
           onClick={handleShowMore}
-          >Show More
+          >Instructions
         </button>
         <button
           className="ingredients-button"
           onClick={handleShowIngredients}
-          >Show Ingredients
+          >Ingredients
         </button>
       </div>
       {isActive ? <CardDirections directions={directions} /> : null}

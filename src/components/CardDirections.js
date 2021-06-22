@@ -6,8 +6,8 @@ const CardDirections = ({directions}) => {
     <div className="recipe-instructions">
       <h4>Instructions: </h4>
       <ol>
-        {directions.map(direction =>
-          <li>{direction}</li>
+        {directions.map((direction, i) =>
+          <li key={i}>{direction}</li>
         )}
       </ol>
     </div>
